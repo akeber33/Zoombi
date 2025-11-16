@@ -1,0 +1,348 @@
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\appsettings.json
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.staticwebassets.endpoints.json
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.exe
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.deps.json
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.runtimeconfig.json
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.pdb
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Azure.Core.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Azure.Identity.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Humanizer.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\MySqlConnector.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.ClientModel.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.CodeDom.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.Convention.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.Hosting.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.Runtime.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.TypedParts.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Drawing.Common.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Memory.Data.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Runtime.Caching.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\src\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.AssemblyReference.cache
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.AssemblyInfoInputs.cache
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.AssemblyInfo.cs
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.CoreCompileInputs.cache
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\scopedcss\bundle\ZoombiAPI.styles.css
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.Up2Date
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.dll
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\refint\ZoombiAPI.dll
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.pdb
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.genruntimeconfig.cache
+C:\src\Zoombi\ZoombiAPI\obj\Debug\net9.0\ref\ZoombiAPI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\appsettings.Development.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\appsettings.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.staticwebassets.endpoints.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.exe
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.deps.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.runtimeconfig.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ZoombiAPI.pdb
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Azure.Core.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Azure.Identity.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Humanizer.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\MySqlConnector.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.ClientModel.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.CodeDom.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.Convention.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.Hosting.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.Runtime.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Composition.TypedParts.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Drawing.Common.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Memory.Data.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Runtime.Caching.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.AssemblyReference.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.AssemblyInfoInputs.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.AssemblyInfo.cs
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.CoreCompileInputs.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\scopedcss\bundle\ZoombiAPI.styles.css
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.build.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.development.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.Up2Date
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\refint\ZoombiAPI.dll
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.pdb
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.genruntimeconfig.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ref\ZoombiAPI.dll

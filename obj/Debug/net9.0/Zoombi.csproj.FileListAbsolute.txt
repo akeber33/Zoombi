@@ -1,0 +1,8 @@
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.csproj.AssemblyReference.cache
+C:\src\Zoombi\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.AssemblyInfoInputs.cache
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.AssemblyInfo.cs
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.csproj.CoreCompileInputs.cache
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.MvcApplicationPartsAssemblyInfo.cs
+C:\src\Zoombi\obj\Debug\net9.0\Zoombi.MvcApplicationPartsAssemblyInfo.cache
