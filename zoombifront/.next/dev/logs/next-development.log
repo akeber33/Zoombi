@@ -1,41 +1,58 @@
-[00:00:00.641] Server  LOG      ✓ Ready in 425ms
-[00:00:04.049] Server  LOG     [API] Base URL configurada: "http://localhost:5065/api"
-[00:00:04.521] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:04.521] Browser LOG     [API] Base URL configurada: http://localhost:5065/api
-[00:00:05.070] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.200] Browser WARN    Image with src "http://localhost:3000/zoombi.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:05.200] Browser WARN    Image with src "/zoombi.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:00.936] Server  LOG      ✓ Ready in 647ms
+[00:01:10.393] Server  LOG      ○ Compiling / ...
+[00:01:11.634] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:11.754] Browser WARN    Image with src "/zoombi.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:05.200] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:05.200] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:05.200] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763353098029}
-[00:00:05.200] Browser LOG     [API] GET http://localhost:5065/api/Dashboard
-[00:00:05.200] Browser LOG     [API] GET http://localhost:5065/api/Dashboard
-[00:00:05.200] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:05.201] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
-[00:00:05.201] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763353097470}
-[00:00:07.735] Browser LOG     [API] Response status: 200
-[00:00:07.735] Browser LOG     [API] Resposta recebida com sucesso
-[00:00:07.735] Browser LOG     [API] Response status: 200
-[00:00:07.735] Browser LOG     [API] Resposta recebida com sucesso
-[00:00:07.735] Browser LOG     Claims do token: {"aud":"ZoombiApp","email":"teste@email.com","exp":1763957764,"iat":1763352964,"iss":"ZoombiAPI","nameid":"2","nbf":1763352964,"unique_name":"Teste1"}
-[00:00:07.735] Browser LOG     [API] GET http://localhost:5065/api/Anotacoes
-[00:00:07.735] Browser LOG     [API] Response status: 200
-[00:00:07.735] Browser LOG     [API] Resposta recebida com sucesso
-[00:00:08.423] Browser LOG     [API] Base URL configurada: http://localhost:5065/api
-[00:00:08.423] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763353101253}
-[00:00:14.974] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:14.974] Browser LOG     [API] Base URL configurada: http://localhost:5065/api
-[00:00:14.974] Browser LOG     [API] GET http://localhost:5065/api/Dashboard
-[00:00:14.974] Browser LOG     [API] GET http://localhost:5065/api/Dashboard
-[00:00:15.132] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:15.132] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
-[00:00:15.132] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763353107922}
-[00:00:15.132] Browser LOG     [API] Response status: 200
-[00:00:15.132] Browser LOG     [API] Resposta recebida com sucesso
-[00:00:15.132] Browser LOG     [API] Response status: 200
-[00:00:15.132] Browser LOG     [API] Resposta recebida com sucesso
-[00:00:15.132] Browser LOG     Claims do token: {"aud":"ZoombiApp","email":"teste@email.com","exp":1763957764,"iat":1763352964,"iss":"ZoombiAPI","nameid":"2","nbf":1763352964,"unique_name":"Teste1"}
-[00:00:15.132] Browser LOG     [API] GET http://localhost:5065/api/Anotacoes
-[00:00:15.132] Browser LOG     [API] Response status: 200
-[00:00:15.132] Browser LOG     [API] Resposta recebida com sucesso
+[00:01:11.754] Browser WARN    Image with src "http://localhost:3000/zoombi.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:11.911] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:11.911] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:11.911] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763387194287}
+[00:01:21.106] Browser LOG     [API] Base URL configurada: http://localhost:5065/api
+[00:01:21.106] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763387203489}
+[00:01:37.208] Browser LOG     [LOGIN] Iniciando login
+[00:01:37.208] Browser LOG     [AUTH] Tentando fazer login...
+[00:01:37.208] Browser LOG     [API] POST http://localhost:5065/api/Auth/login
+[00:01:39.293] Browser LOG     [API] Response status: 200
+[00:01:39.293] Browser LOG     [API] Resposta recebida com sucesso
+[00:01:39.293] Browser LOG     [API] Token salvo no localStorage
+[00:01:39.293] Browser LOG     [AUTH] Login bem-sucedido!
+[00:01:40.859] Server  LOG     [API] Base URL configurada: "http://localhost:5065/api"
+[00:01:41.111] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:41.111] Browser LOG     [API] Base URL configurada: http://localhost:5065/api
+[00:01:41.111] Browser LOG     [API] GET http://localhost:5065/api/Dashboard
+[00:01:41.111] Browser LOG     [API] GET http://localhost:5065/api/Dashboard
+[00:01:41.229] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:41.229] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:01:41.229] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763387223620}
+[00:01:41.810] Browser LOG     [API] Response status: 200
+[00:01:41.810] Browser LOG     [API] Resposta recebida com sucesso
+[00:01:41.810] Browser LOG     [API] Response status: 200
+[00:01:41.810] Browser LOG     [API] Resposta recebida com sucesso
+[00:01:41.810] Browser LOG     Claims do token: {"aud":"ZoombiApp","email":"teste@email.com","exp":1763992021,"iat":1763387221,"iss":"ZoombiAPI","nameid":"2","nbf":1763387221,"unique_name":"Teste1"}
+[00:01:41.810] Browser LOG     [API] GET http://localhost:5065/api/Anotacoes
+[00:01:41.810] Browser LOG     [API] Response status: 200
+[00:01:41.810] Browser LOG     [API] Resposta recebida com sucesso
+[00:10:26.647] Browser LOG     [API] GET http://localhost:5065/api/Materias/7
+[00:10:26.647] Browser LOG     [API] Response status: 200
+[00:10:26.647] Browser LOG     [API] Resposta recebida com sucesso
+[00:10:26.647] Browser LOG     Matéria carregada: {"cor":"bg-blue-500","id":7,"nome":"História","notaProva":0.3,"professorId":14,"usuarioId":"2"}
+[00:10:26.647] Browser LOG     Trabalhos carregados: 0
+[00:10:35.132] Browser LOG     [API] GET http://localhost:5065/api/Materias/7
+[00:10:35.132] Browser LOG     [API] Response status: 200
+[00:10:35.132] Browser LOG     [API] Resposta recebida com sucesso
+[00:10:35.132] Browser LOG     Matéria carregada: {"cor":"bg-blue-500","id":7,"nome":"História","notaProva":0.3,"professorId":14,"usuarioId":"2"}
+[00:10:35.132] Browser LOG     Trabalhos carregados: 0
+[00:23:02.493] Server  LOG      ✓ Compiled in 66ms
+[00:23:04.180] Server  LOG      ✓ Compiled in 46ms
+[00:23:09.288] Server  LOG      ✓ Compiled in 114ms
+[00:24:20.751] Server  LOG      ✓ Compiled in 81ms
+[00:24:22.066] Server  LOG      ✓ Compiled in 224ms
+[00:24:43.737] Server  LOG      ✓ Compiled in 233ms
+[00:25:14.128] Server  LOG      ✓ Compiled in 36ms
+[00:25:15.471] Server  LOG      ✓ Compiled in 43ms
+[00:25:46.862] Server  LOG      ✓ Compiled in 43ms
+[00:25:49.231] Server  LOG      ✓ Compiled in 35ms
+[00:25:50.429] Server  LOG      ✓ Compiled in 39ms
+[00:29:43.730] Server  LOG      ✓ Compiled in 40ms
+[00:30:18.266] Server  LOG      ✓ Compiled in 143ms
+[00:30:36.505] Server  LOG      ✓ Compiled in 36ms

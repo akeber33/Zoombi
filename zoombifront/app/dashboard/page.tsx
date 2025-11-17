@@ -735,7 +735,7 @@ export default function DashboardPage() {
                     </motion.div>
 
                     <section className="space-y-4">
-                      <h2 className="text-2xl font-semibold">Métricas de Progresso</h2>
+                      <h2 className="text-2xl font-semibold text-[#f0f0f0]">Métricas de Progresso</h2>
                       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         <Card className="overflow-hidden rounded-3xl border-2">
                           <CardHeader className="pb-2">
@@ -830,8 +830,8 @@ export default function DashboardPage() {
 
                     <section className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <h2 className="text-2xl font-semibold">Resumo das Matérias</h2>
-                        <Button variant="ghost" className="rounded-2xl" onClick={() => setActiveTab("aulas")}>
+                        <h2 className="text-2xl font-semibold text-[#f0f0f0]">Resumo das Matérias</h2>
+                        <Button variant="ghost" className="rounded-2xl text-[#f0f0f0]" onClick={() => setActiveTab("aulas")}>
                           Ver Todas
                         </Button>
                       </div>
@@ -893,7 +893,7 @@ export default function DashboardPage() {
                     </motion.div>
 
                     <section className="space-y-4">
-                      <h2 className="text-2xl font-semibold">Todas as Matérias</h2>
+                      <h2 className="text-2xl font-semibold text-[#f0f0f0]">Todas as Matérias</h2>
                       {subjects.length === 0 ? (
                         <Card className="rounded-3xl p-12">
                           <div className="text-center space-y-4">
@@ -1004,7 +1004,7 @@ export default function DashboardPage() {
                     </motion.div>
 
                     <section className="space-y-4">
-                      <h2 className="text-2xl font-semibold">Todos os Professores</h2>
+                      <h2 className="text-2xl font-semibold text-[#f0f0f0]">Todos os Professores</h2>
                       {teachers.length === 0 ? (
                         <Card className="rounded-3xl p-12">
                           <div className="text-center space-y-4">
@@ -1082,7 +1082,7 @@ export default function DashboardPage() {
                     </motion.div>
 
                     <section className="space-y-4">
-                      <h2 className="text-2xl font-semibold">Todas as Anotações</h2>
+                      <h2 className="text-2xl font-semibold text-[#f0f0f0]">Todas as Anotações</h2>
                       {notes.length === 0 ? (
                         <Card className="rounded-3xl p-12">
                           <div className="text-center space-y-4">

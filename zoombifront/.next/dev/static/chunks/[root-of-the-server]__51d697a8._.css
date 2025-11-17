@@ -2468,8 +2468,24 @@
     white-space: nowrap;
   }
 
+  .text-\[\#\#18b64e\] {
+    color: # #18b64e;
+  }
+
+  .text-\[\#18b64e\] {
+    color: #18b64e;
+  }
+
   .text-\[\#251a32\] {
     color: #251a32;
+  }
+
+  .text-\[\#f0f0f0\] {
+    color: #f0f0f0;
+  }
+
+  .text-\[\#ffff\] {
+    color: #fff;
   }
 
   .text-accent-foreground {
