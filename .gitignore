@@ -11,3 +11,4 @@ out/
 .DS_Store
 Thumbs.db
 zoombifront/.next/dev/logs/next-development.log
+node_modules/
