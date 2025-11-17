@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZoombiAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e63112b4b57097173eb2c76e77c43e9f62849f14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17a7377acc7ea076954bab48d90b8351530d21f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZoombiAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZoombiAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

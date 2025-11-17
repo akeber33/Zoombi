@@ -1,0 +1,10 @@
+# .NET build
+bin/
+obj/
+
+# Next.js build e cache
+.next/
+node_modules/
+
+# Logs
+*.log

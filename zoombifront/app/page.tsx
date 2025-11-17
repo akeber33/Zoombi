@@ -3,7 +3,6 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
-
   return (
     <>
 
@@ -12,7 +11,7 @@ export default function Home() {
         <main className={styles.mainContent}>
           <div className={styles.imageContainer}>
             <Image
-              src="/zoombi.gif"
+              src="/zoombi.png"
               alt="Personagem zoombi com chapéu de formatura"
               width={400}
               height={400}
@@ -33,8 +32,6 @@ export default function Home() {
 
       </div>
 
-      {/* SEGUNDA TELA: Esta tela aparece quando você rola a página para baixo
-      */}
       <div className={styles.secondScreen}>
         <h2>Bem-vindo ao cemitério acadêmico!</h2>
         <p>A vida universitária não precisa ser um pesadelo.</p>

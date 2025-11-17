@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\src\\Zoombi (2)\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj": {}
+    "C:\\Users\\rebek\\OneDrive\\Área de Trabalho\\Zoombi\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj": {}
   },
   "projects": {
-    "C:\\src\\Zoombi (2)\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj": {
+    "C:\\Users\\rebek\\OneDrive\\Área de Trabalho\\Zoombi\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\src\\Zoombi (2)\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj",
+        "projectUniqueName": "C:\\Users\\rebek\\OneDrive\\Área de Trabalho\\Zoombi\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj",
         "projectName": "ZoombiAPI",
-        "projectPath": "C:\\src\\Zoombi (2)\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj",
+        "projectPath": "C:\\Users\\rebek\\OneDrive\\Área de Trabalho\\Zoombi\\Zoombi\\ZoombiAPI\\ZoombiAPI.csproj",
         "packagesPath": "C:\\Users\\rebek\\.nuget\\packages\\",
-        "outputPath": "C:\\src\\Zoombi (2)\\Zoombi\\ZoombiAPI\\obj\\",
+        "outputPath": "C:\\Users\\rebek\\OneDrive\\Área de Trabalho\\Zoombi\\Zoombi\\ZoombiAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

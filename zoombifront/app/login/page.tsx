@@ -15,7 +15,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  
+
   const [formData, setFormData] = useState({
     nomeCompleto: "",
     email: "",
@@ -57,7 +57,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateForm()) return
 
     setLoading(true)
@@ -65,21 +65,19 @@ export default function LoginPage() {
 
     try {
       console.log('[LOGIN] Iniciando', isLogin ? 'login' : 'registro')
-      
+
       if (isLogin) {
-        const response = await authApi.login(formData.email, formData.password)
-        console.log('[LOGIN] Login bem-sucedido, redirecionando...')
+        await authApi.login(formData.email, formData.password)
         window.location.href = "/dashboard"
       } else {
-        const response = await authApi.register(formData.nomeCompleto, formData.email, formData.password)
-        console.log('[LOGIN] Registro bem-sucedido, redirecionando...')
+        await authApi.register(formData.nomeCompleto, formData.email, formData.password)
         window.location.href = "/dashboard"
       }
     } catch (err) {
       console.error('[LOGIN] Erro:', err)
       const errorMessage = err instanceof Error ? err.message : "Erro ao processar sua solicitação"
       setError(errorMessage)
-      
+
       if (errorMessage.includes('Faça login')) {
         setTimeout(() => {
           setIsLogin(true)
@@ -103,9 +101,20 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-4">
+    <div className="min-h-screen flex items-center justify-center relative p-4">
+
+      {/* === 1. IMAGEM DE FUNDO === */}
+      <div
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: "url('/fundo.png')" }}
+      />
+
+      {/* === 2. OVERLAY — agora sem bloquear clique === */}
+      <div className="absolute inset-0 -z-10 bg-black/40 backdrop-blur-sm pointer-events-none"></div>
+
+      {/* === 3. BACKGROUND ANIMADO — agora sem bloquear clique === */}
       <motion.div
-        className="absolute inset-0 -z-10 opacity-30"
+        className="absolute inset-0 -z-0 opacity-30 pointer-events-none"
         animate={{
           background: [
             "radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)",
@@ -123,28 +132,15 @@ export default function LoginPage() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-md"
       >
-        <div className="text-center mb-8">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 text-white mb-4"
-          >
-            <GraduationCap className="w-8 h-8" />
-          </motion.div>
-          <h1 className="text-3xl font-bold mb-2">Zoombi</h1>
-          <p className="text-muted-foreground">Organize seus estudos de forma inteligente</p>
-        </div>
-
         <Card className="rounded-3xl border-2 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-2xl text-center">
+            <CardTitle className="text-2xl text-center text-[#251a32]">
               {isLogin ? "Entrar na sua conta" : "Criar nova conta"}
             </CardTitle>
             <CardDescription className="text-center">
               {isLogin
                 ? "Entre com suas credenciais para acessar o dashboard"
-                : "Preencha os dados abaixo para criar sua conta"}
+                : "Preencha os dados abaixo para se juntar à horda"}
             </CardDescription>
           </CardHeader>
 
@@ -164,11 +160,10 @@ export default function LoginPage() {
                     id="nomeCompleto"
                     name="nomeCompleto"
                     type="text"
-                    placeholder="João Silva"
+                    placeholder="Seu nome completo"
                     value={formData.nomeCompleto}
                     onChange={handleInputChange}
                     className="rounded-2xl"
-                    onKeyPress={(e) => e.key === 'Enter' && handleSubmit(e)}
                   />
                 </div>
               )}
@@ -185,7 +180,6 @@ export default function LoginPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="rounded-2xl pl-10"
-                    onKeyPress={(e) => e.key === 'Enter' && handleSubmit(e)}
                   />
                 </div>
               </div>
@@ -202,7 +196,6 @@ export default function LoginPage() {
                     value={formData.password}
                     onChange={handleInputChange}
                     className="rounded-2xl pl-10 pr-10"
-                    onKeyPress={(e) => e.key === 'Enter' && handleSubmit(e)}
                   />
                   <Button
                     type="button"
@@ -211,11 +204,7 @@ export default function LoginPage() {
                     className="absolute right-1 top-1 h-8 w-8 rounded-xl"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
-                    ) : (
-                      <Eye className="h-4 w-4" />
-                    )}
+                    {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </Button>
                 </div>
               </div>
@@ -233,7 +222,6 @@ export default function LoginPage() {
                       value={formData.confirmPassword}
                       onChange={handleInputChange}
                       className="rounded-2xl pl-10"
-                      onKeyPress={(e) => e.key === 'Enter' && handleSubmit(e)}
                     />
                   </div>
                 </div>
@@ -241,7 +229,7 @@ export default function LoginPage() {
 
               <Button
                 onClick={handleSubmit}
-                className="w-full rounded-2xl h-11"
+                className="w-full rounded-2xl h-11 bg-[#251a32]"
                 disabled={loading}
               >
                 {loading ? (
@@ -251,11 +239,7 @@ export default function LoginPage() {
                   >
                     <GraduationCap className="h-5 w-5" />
                   </motion.div>
-                ) : isLogin ? (
-                  "Entrar"
-                ) : (
-                  "Criar Conta"
-                )}
+                ) : isLogin ? "Entrar" : "Criar Conta"}
               </Button>
             </div>
           </CardContent>
@@ -264,22 +248,22 @@ export default function LoginPage() {
             <div className="text-center text-sm">
               {isLogin ? (
                 <p className="text-muted-foreground">
-                  Não tem uma conta?{" "}
+                  Ainda não é Zoombi?{" "}
                   <button
                     type="button"
                     onClick={toggleMode}
-                    className="text-primary font-medium hover:underline"
+                    className="text-[#251a32] font-medium hover:underline"
                   >
                     Criar conta
                   </button>
                 </p>
               ) : (
                 <p className="text-muted-foreground">
-                  Já tem uma conta?{" "}
+                  Já é Zoombi?{" "}
                   <button
                     type="button"
                     onClick={toggleMode}
-                    className="text-primary font-medium hover:underline"
+                    className="text-[#251a32] font-medium hover:underline"
                   >
                     Fazer login
                   </button>
