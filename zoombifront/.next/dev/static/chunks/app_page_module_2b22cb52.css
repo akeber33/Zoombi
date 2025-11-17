@@ -1,0 +1,101 @@
+/* [project]/app/page.module.css [app-client] (css) */
+.page-module__E0kJGG__firstScreen {
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  background-image: url("/fundo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 2rem 4rem;
+  display: flex;
+}
+
+.page-module__E0kJGG__secondScreen {
+  color: #fff;
+  text-align: center;
+  background-image: url("/fundo2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 4rem;
+  display: flex;
+}
+
+.page-module__E0kJGG__contentWrapper {
+  z-index: 1;
+  position: relative;
+}
+
+.page-module__E0kJGG__link {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity .2s ease-in-out;
+}
+
+.page-module__E0kJGG__link:hover {
+  opacity: .8;
+}
+
+.page-module__E0kJGG__mainContent {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  display: flex;
+}
+
+.page-module__E0kJGG__imageContainer {
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 35%;
+  display: flex;
+}
+
+.page-module__E0kJGG__textContainer {
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  display: flex;
+}
+
+.page-module__E0kJGG__title {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.page-module__E0kJGG__zoombiText {
+  color: #bdb37e;
+  font-size: 100px;
+}
+
+.page-module__E0kJGG__ctaButton {
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #9b6c9b;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto 3rem;
+  padding: .8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color .2s ease-in-out;
+}
+
+.page-module__E0kJGG__ctaButton:hover {
+  background-color: #a978a9;
+}
+
+/*# sourceMappingURL=app_page_module_2b22cb52.css.map*/

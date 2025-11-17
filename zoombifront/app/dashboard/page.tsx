@@ -17,6 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Checkbox } from "@/components/ui/checkbox"
 import { cn } from "@/lib/utils"
 import {
   dashboardApi,
@@ -32,9 +33,7 @@ import {
   type Note,
   type Student,
   type DashboardStats,
-  type CreateProfessorDTO,
-  type Professor,
-  type MateriaResumida
+  type Trabalho,
 } from "@/lib/api"
 
 const sidebarItems = [
@@ -62,6 +61,14 @@ const NOTE_COLORS = [
   { label: "Amarelo Claro", value: "bg-yellow-50" },
 ]
 
+interface TrabalhoForm {
+  id?: number
+  titulo: string
+  descricao: string
+  dataEntrega: string
+  concluido: boolean
+}
+
 export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState("painel")
   const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -85,7 +92,13 @@ export default function DashboardPage() {
 
   // Form states
   const [teacherForm, setTeacherForm] = useState({ nome: "", email: "", disciplina: "" })
-  const [subjectForm, setSubjectForm] = useState({ nome: "", cor: "bg-blue-500", professorId: "" })
+  const [subjectForm, setSubjectForm] = useState({ 
+    nome: "", 
+    cor: "bg-blue-500", 
+    professorId: "",
+    notaProva: ""
+  })
+  const [trabalhos, setTrabalhos] = useState<TrabalhoForm[]>([])
   const [noteForm, setNoteForm] = useState({ titulo: "", conteudo: "", materiaId: "", cor: "bg-blue-50" })
   const [profileForm, setProfileForm] = useState({ nome: "", email: "", telefone: "" })
 
@@ -102,27 +115,66 @@ export default function DashboardPage() {
       setLoading(true)
       setError(null)
 
-      const [dashboardData, studentData, statsData] = await Promise.all([
+      const [dashboardData, statsData] = await Promise.all([
         dashboardApi.getDashboard(),
-        studentApi.getProfile(),
         studentApi.getStats(),
       ])
+
+      // Obter nome do usuário do token
+      const token = typeof window !== 'undefined' ? localStorage.getItem('auth_token') : null
+      let nomeUsuario = "Estudante"
+      
+      if (token) {
+        try {
+          const payload = JSON.parse(atob(token.split('.')[1]))
+          console.log("Claims do token:", payload)
+          
+          // Tentar diferentes claims de nome (ordem de prioridade)
+          nomeUsuario = payload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] || 
+                       payload.name || 
+                       payload.unique_name ||
+                       "Estudante"
+          
+          const userId = payload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] || 
+                        payload.nameid || 
+                        payload.sub || 
+                        ""
+          
+          const email = payload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] || 
+                       payload.email || 
+                       ""
+
+          setStudent({
+            id: userId,
+            name: nomeUsuario,
+            email: email,
+            phone: "",
+            avatar: ""
+          })
+
+          setProfileForm({ 
+            nome: nomeUsuario, 
+            email: email, 
+            telefone: "" 
+          })
+        } catch (err) {
+          console.error("Erro ao decodificar token:", err)
+        }
+      }
 
       const mappedTeachers = dashboardData.professores.map(mapProfessorToTeacher)
       const mappedSubjects = dashboardData.materiasResumidas.map(mapMateriaToSubject)
 
       setTeachers(mappedTeachers)
       setSubjects(mappedSubjects)
-      setStudent(studentData)
       setStats(statsData)
-      setProfileForm({ nome: studentData.name, email: studentData.email, telefone: studentData.phone || "" })
 
       try {
         const notesData = await notesApi.getAll()
         setNotes(notesData.map((n: any) => ({
           id: n.id.toString(),
           title: n.titulo,
-          subject: dashboardData.materiasResumidas.find((m: MateriaResumida) => m.id === n.materiaId)?.nome || "Geral",
+          subject: dashboardData.materiasResumidas.find((m: any) => m.id === n.materiaId)?.nome || "Geral",
           subjectId: n.materiaId?.toString() || "",
           content: n.conteudo,
           date: new Date(n.dataCriacao).toLocaleDateString('pt-BR'),
@@ -130,7 +182,8 @@ export default function DashboardPage() {
           createdAt: n.dataCriacao,
           updatedAt: n.dataAtualizacao,
         })))
-      } catch {
+      } catch (noteError) {
+        console.error("Erro ao carregar anotações:", noteError)
         setNotes([])
       }
     } catch (error) {
@@ -179,16 +232,22 @@ export default function DashboardPage() {
         return
       }
 
-      const dto: CreateProfessorDTO = {
+      const dto = {
         nome: teacherForm.nome,
         email: teacherForm.email,
         disciplina: teacherForm.disciplina || "",
       }
 
-      await teachersApi.create(dto)
+      if (editingTeacher) {
+        await teachersApi.update(parseInt(editingTeacher.id), dto)
+      } else {
+        await teachersApi.create(dto)
+      }
+
       await loadDashboardData()
       setTeacherModal(false)
       setTeacherForm({ nome: "", email: "", disciplina: "" })
+      setEditingTeacher(null)
     } catch (error) {
       console.error("Erro ao salvar professor:", error)
       alert("Erro ao salvar professor: " + (error instanceof Error ? error.message : "Erro desconhecido"))
@@ -208,19 +267,79 @@ export default function DashboardPage() {
   }
 
   // Subject CRUD
-  const openSubjectModal = (subject?: Subject) => {
+  const openSubjectModal = async (subject?: Subject) => {
     if (subject) {
       setEditingSubject(subject)
-      setSubjectForm({
-        nome: subject.name,
-        cor: subject.color,
-        professorId: subject.teacherId || ""
-      })
+      
+      // Carregar dados completos da matéria incluindo trabalhos
+      try {
+        const materiaCompleta = await subjectsApi.getById(parseInt(subject.id))
+        
+        setSubjectForm({
+          nome: materiaCompleta.nome,
+          cor: materiaCompleta.cor,
+          professorId: materiaCompleta.professorId.toString(),
+          notaProva: materiaCompleta.notaProva > 0 ? materiaCompleta.notaProva.toString() : ""
+        })
+        
+        // Mapear trabalhos
+        setTrabalhos(materiaCompleta.trabalhos?.map(t => ({
+          id: t.id,
+          titulo: t.titulo,
+          descricao: t.descricao || "",
+          dataEntrega: new Date(t.dataEntrega).toISOString().split('T')[0],
+          concluido: t.concluido
+        })) || [])
+        
+        console.log("Matéria carregada:", materiaCompleta)
+        console.log("Trabalhos carregados:", materiaCompleta.trabalhos?.length || 0)
+      } catch (error) {
+        console.error("Erro ao carregar matéria completa:", error)
+        alert("Erro ao carregar dados da matéria")
+      }
     } else {
       setEditingSubject(null)
-      setSubjectForm({ nome: "", cor: "bg-blue-500", professorId: "" })
+      setSubjectForm({ nome: "", cor: "bg-blue-500", professorId: "", notaProva: "" })
+      setTrabalhos([])
     }
     setSubjectModal(true)
+  }
+
+  const adicionarTrabalho = () => {
+    const hoje = new Date().toISOString().split('T')[0]
+    setTrabalhos([...trabalhos, {
+      titulo: "",
+      descricao: "",
+      dataEntrega: hoje,
+      concluido: false
+    }])
+  }
+
+  const removerTrabalho = async (index: number) => {
+    const trabalho = trabalhos[index]
+    
+    // Se o trabalho tem ID, deletar no backend
+    if (trabalho.id && editingSubject) {
+      if (!confirm("Deseja realmente excluir este trabalho?")) return
+      
+      try {
+        await subjectsApi.deleteTrabalho(parseInt(editingSubject.id), trabalho.id)
+        setTrabalhos(trabalhos.filter((_, i) => i !== index))
+        console.log("Trabalho excluído com sucesso!")
+      } catch (error) {
+        console.error("Erro ao deletar trabalho:", error)
+        alert("Erro ao deletar trabalho: " + (error instanceof Error ? error.message : "Erro desconhecido"))
+      }
+    } else {
+      // Se não tem ID, apenas remove da lista local
+      setTrabalhos(trabalhos.filter((_, i) => i !== index))
+    }
+  }
+
+  const atualizarTrabalho = (index: number, campo: keyof TrabalhoForm, valor: any) => {
+    const novosTrabalhos = [...trabalhos]
+    novosTrabalhos[index] = { ...novosTrabalhos[index], [campo]: valor }
+    setTrabalhos(novosTrabalhos)
   }
 
   const saveSubject = async () => {
@@ -230,22 +349,88 @@ export default function DashboardPage() {
         return
       }
 
-      if (editingSubject) {
-        await subjectsApi.update(parseInt(editingSubject.id), {
-          nome: subjectForm.nome,
-          cor: subjectForm.cor,
-          professorId: parseInt(subjectForm.professorId)
-        })
-      } else {
-        await subjectsApi.create({
-          nome: subjectForm.nome,
-          cor: subjectForm.cor,
-          professorId: parseInt(subjectForm.professorId)
-        })
+      // Preparar DTO base
+      const materiaDto: any = {
+        nome: subjectForm.nome,
+        cor: subjectForm.cor,
+        professorId: parseInt(subjectForm.professorId)
       }
+
+      // IMPORTANTE: Só adiciona notaProva se o campo foi preenchido
+      // Se estiver vazio, não envia nada (mantém o valor existente no backend)
+      if (subjectForm.notaProva && subjectForm.notaProva.trim() !== "") {
+        const nota = parseFloat(subjectForm.notaProva)
+        if (!isNaN(nota) && nota >= 0 && nota <= 10) {
+          materiaDto.notaProva = nota
+        }
+      }
+
+      console.log("Salvando matéria:", materiaDto)
+      console.log("Trabalhos a processar:", trabalhos.length)
+
+      let materiaId: number
+
+      if (editingSubject) {
+        // Atualizar matéria existente
+        await subjectsApi.update(parseInt(editingSubject.id), materiaDto)
+        materiaId = parseInt(editingSubject.id)
+        
+        console.log("Matéria atualizada, processando trabalhos...")
+        
+        // Processar trabalhos
+        for (const trabalho of trabalhos) {
+          // Validar se tem título
+          if (!trabalho.titulo.trim()) {
+            console.log("Ignorando trabalho sem título")
+            continue
+          }
+
+          const trabalhoDto = {
+            titulo: trabalho.titulo,
+            descricao: trabalho.descricao || "",
+            dataEntrega: new Date(trabalho.dataEntrega).toISOString(),
+            concluido: trabalho.concluido
+          }
+
+          if (trabalho.id) {
+            // Atualizar trabalho existente
+            console.log("Atualizando trabalho:", trabalho.id)
+            await subjectsApi.updateTrabalho(materiaId, trabalho.id, trabalhoDto)
+          } else {
+            // Criar novo trabalho
+            console.log("Criando novo trabalho:", trabalhoDto)
+            await subjectsApi.addTrabalho(materiaId, trabalhoDto)
+          }
+        }
+      } else {
+        // Criar nova matéria
+        const materiaResponse = await subjectsApi.create(materiaDto)
+        materiaId = materiaResponse.id
+        
+        console.log("Nova matéria criada:", materiaId)
+        
+        // Adicionar trabalhos para nova matéria
+        for (const trabalho of trabalhos) {
+          if (!trabalho.titulo.trim()) continue
+
+          const trabalhoDto = {
+            titulo: trabalho.titulo,
+            descricao: trabalho.descricao || "",
+            dataEntrega: new Date(trabalho.dataEntrega).toISOString(),
+            concluido: trabalho.concluido
+          }
+          
+          console.log("Criando trabalho:", trabalhoDto)
+          await subjectsApi.addTrabalho(materiaId, trabalhoDto)
+        }
+      }
+
+      console.log("Matéria e trabalhos salvos com sucesso!")
       await loadDashboardData()
       setSubjectModal(false)
-      setSubjectForm({ nome: "", cor: "bg-blue-500", professorId: "" })
+      setSubjectForm({ nome: "", cor: "bg-blue-500", professorId: "", notaProva: "" })
+      setTrabalhos([])
+      setEditingSubject(null)
     } catch (error) {
       console.error("Erro ao salvar matéria:", error)
       alert("Erro ao salvar matéria: " + (error instanceof Error ? error.message : "Erro desconhecido"))
@@ -1077,59 +1262,187 @@ export default function DashboardPage() {
 
       {/* Modal Matéria */}
       <Dialog open={subjectModal} onOpenChange={setSubjectModal}>
-        <DialogContent className="sm:max-w-[600px] rounded-3xl">
+        <DialogContent className="sm:max-w-[700px] rounded-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{editingSubject ? "Editar Matéria" : "Adicionar Matéria"}</DialogTitle>
             <DialogDescription>
-              {editingSubject ? "Atualize as informações da matéria" : "Adicione uma nova matéria ao sistema"}
+              Preencha as informações da matéria, incluindo nota e trabalhos
             </DialogDescription>
           </DialogHeader>
-          <div className="space-y-4 py-4">
-            <div className="space-y-2">
-              <Label htmlFor="subject-name">Nome da Matéria *</Label>
-              <Input id="subject-name" placeholder="Ex: Matemática" value={subjectForm.nome} onChange={(e) => setSubjectForm({ ...subjectForm, nome: e.target.value })} className="rounded-2xl" />
+          
+          <div className="space-y-6 py-4">
+            {/* Informações Básicas */}
+            <div className="space-y-4">
+              <h3 className="font-semibold text-sm">Informações Básicas</h3>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="subject-name">Nome da Matéria *</Label>
+                  <Input 
+                    id="subject-name" 
+                    placeholder="Ex: História" 
+                    value={subjectForm.nome} 
+                    onChange={(e) => setSubjectForm({ ...subjectForm, nome: e.target.value })} 
+                    className="rounded-2xl" 
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="subject-professor">Professor *</Label>
+                  <Select value={subjectForm.professorId} onValueChange={(value) => setSubjectForm({ ...subjectForm, professorId: value })}>
+                    <SelectTrigger className="rounded-2xl">
+                      <SelectValue placeholder="Selecione o professor" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {teachers.map((teacher) => (
+                        <SelectItem key={teacher.id} value={teacher.id}>
+                          {teacher.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="subject-color">Cor da Matéria</Label>
+                  <Select value={subjectForm.cor} onValueChange={(value) => setSubjectForm({ ...subjectForm, cor: value })}>
+                    <SelectTrigger className="rounded-2xl">
+                      <SelectValue placeholder="Cor" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {COLORS.map((color) => (
+                        <SelectItem key={color.value} value={color.value}>
+                          <div className="flex items-center gap-2">
+                            <div className={cn("w-4 h-4 rounded-full", color.value)} />
+                            {color.label}
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="subject-nota">Nota da Prova</Label>
+                  <Input 
+                    id="subject-nota" 
+                    type="number"
+                    min="0"
+                    max="10"
+                    step="0.1"
+                    placeholder="Digite a nota (0-10)" 
+                    value={subjectForm.notaProva} 
+                    onChange={(e) => setSubjectForm({ ...subjectForm, notaProva: e.target.value })} 
+                    className="rounded-2xl" 
+                  />
+                </div>
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="subject-professor">Professor *</Label>
-                <Select value={subjectForm.professorId} onValueChange={(value) => setSubjectForm({ ...subjectForm, professorId: value })}>
-                  <SelectTrigger className="rounded-2xl">
-                    <SelectValue placeholder="Selecione o professor" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {teachers.map((teacher) => (
-                      <SelectItem key={teacher.id} value={teacher.id}>
-                        {teacher.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+
+            {/* Trabalhos */}
+            <div className="space-y-4 border-t pt-4">
+              <div className="flex items-center justify-between">
+                <h3 className="font-semibold text-sm">Trabalhos</h3>
+                <Button 
+                  type="button"
+                  variant="outline" 
+                  size="sm" 
+                  className="rounded-2xl" 
+                  onClick={adicionarTrabalho}
+                >
+                  <Plus className="mr-2 h-4 w-4" />
+                  Adicionar Trabalho
+                </Button>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="subject-color">Cor da matéria</Label>
-                <Select value={subjectForm.cor} onValueChange={(value) => setSubjectForm({ ...subjectForm, cor: value })}>
-                  <SelectTrigger className="rounded-2xl">
-                    <SelectValue placeholder="Cor" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {COLORS.map((color) => (
-                      <SelectItem key={color.value} value={color.value}>
-                        <div className="flex items-center gap-2">
-                          <div className={cn("w-4 h-4 rounded-full", color.value)} />
-                          {color.label}
+
+              {trabalhos.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground text-sm">
+                  Nenhum trabalho adicionado
+                </div>
+              ) : (
+                <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
+                  {trabalhos.map((trabalho, index) => (
+                    <Card key={index} className="p-4 rounded-2xl">
+                      <div className="space-y-3">
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex-1 space-y-3">
+                            <Input 
+                              placeholder="Título do trabalho"
+                              value={trabalho.titulo}
+                              onChange={(e) => atualizarTrabalho(index, 'titulo', e.target.value)}
+                              className="rounded-xl"
+                            />
+                            
+                            <Textarea 
+                              placeholder="Descrição (opcional)"
+                              value={trabalho.descricao}
+                              onChange={(e) => atualizarTrabalho(index, 'descricao', e.target.value)}
+                              className="rounded-xl resize-none"
+                              rows={2}
+                            />
+                            
+                            <div className="flex items-center gap-3">
+                              <div className="flex-1">
+                                <Input 
+                                  type="date"
+                                  value={trabalho.dataEntrega}
+                                  onChange={(e) => atualizarTrabalho(index, 'dataEntrega', e.target.value)}
+                                  className="rounded-xl"
+                                />
+                              </div>
+                              
+                              <div className="flex items-center gap-2">
+                                <Checkbox 
+                                  id={`trabalho-${index}`}
+                                  checked={trabalho.concluido}
+                                  onCheckedChange={(checked) => atualizarTrabalho(index, 'concluido', checked)}
+                                />
+                                <Label htmlFor={`trabalho-${index}`} className="text-sm cursor-pointer">
+                                  Concluído
+                                </Label>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="icon"
+                            className="rounded-xl text-red-500 hover:text-red-600 hover:bg-red-50"
+                            onClick={() => removerTrabalho(index)}
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
                         </div>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
-          <div className="flex gap-2">
-            <Button variant="outline" className="flex-1 rounded-2xl" onClick={() => setSubjectModal(false)}>Cancelar</Button>
-            <Button className="flex-1 rounded-2xl" onClick={saveSubject}>
+
+          <div className="flex gap-2 border-t pt-4">
+            <Button 
+              variant="outline" 
+              className="flex-1 rounded-2xl" 
+              onClick={() => {
+                setSubjectModal(false)
+                setSubjectForm({ nome: "", cor: "bg-blue-500", professorId: "", notaProva: "" })
+                setTrabalhos([])
+                setEditingSubject(null)
+              }}
+            >
+              Cancelar
+            </Button>
+            <Button 
+              className="flex-1 rounded-2xl" 
+              onClick={saveSubject}
+            >
               <Save className="mr-2 h-4 w-4" />
-              Salvar
+              Salvar Matéria
             </Button>
           </div>
         </DialogContent>

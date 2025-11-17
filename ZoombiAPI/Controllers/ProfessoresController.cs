@@ -28,20 +28,8 @@ namespace Zoombi.API.Controllers
                 .ToListAsync();
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Professor>> CreateProfessor(Professor professor)
-        {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            professor.UsuarioId = userId!;
-            
-            _context.Professores.Add(professor);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetProfessores), new { id = professor.Id }, professor);
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProfessor(int id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Professor>> GetProfessor(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var professor = await _context.Professores
@@ -49,10 +37,118 @@ namespace Zoombi.API.Controllers
 
             if (professor == null) return NotFound();
 
-            _context.Professores.Remove(professor);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return professor;
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Professor>> CreateProfessor([FromBody] CreateProfessorRequest request)
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                Console.WriteLine($"[PROFESSORES] ========== CRIAR PROFESSOR ==========");
+                Console.WriteLine($"[PROFESSORES] UserId: {userId}");
+                Console.WriteLine($"[PROFESSORES] Nome: {request.Nome}");
+                Console.WriteLine($"[PROFESSORES] Email: {request.Email}");
+
+                var professor = new Professor
+                {
+                    Nome = request.Nome,
+                    Email = request.Email,
+                    Disciplina = request.Disciplina,
+                    UsuarioId = userId!
+                };
+
+                _context.Professores.Add(professor);
+                await _context.SaveChangesAsync();
+
+                Console.WriteLine($"[PROFESSORES] ✅ Professor criado - ID: {professor.Id}");
+                return CreatedAtAction(nameof(GetProfessor), new { id = professor.Id }, professor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[PROFESSORES] ❌ Erro: {ex.Message}");
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProfessor(int id, [FromBody] UpdateProfessorRequest request)
+        {
+            try
+            {
+                if (id != request.Id) return BadRequest(new { message = "ID não corresponde" });
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var existente = await _context.Professores.FindAsync(id);
+
+                if (existente == null || existente.UsuarioId != userId)
+                {
+                    Console.WriteLine($"[PROFESSORES] Professor não encontrado - ID: {id}");
+                    return NotFound();
+                }
+
+                Console.WriteLine($"[PROFESSORES] ========== ATUALIZAR PROFESSOR ==========");
+                Console.WriteLine($"[PROFESSORES] ID: {id}");
+                Console.WriteLine($"[PROFESSORES] Nome: {request.Nome}");
+
+                existente.Nome = request.Nome;
+                existente.Email = request.Email;
+                existente.Disciplina = request.Disciplina;
+
+                await _context.SaveChangesAsync();
+
+                Console.WriteLine($"[PROFESSORES] ✅ Professor atualizado");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[PROFESSORES] ❌ Erro: {ex.Message}");
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProfessor(int id)
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var professor = await _context.Professores
+                    .FirstOrDefaultAsync(p => p.Id == id && p.UsuarioId == userId);
+
+                if (professor == null)
+                {
+                    Console.WriteLine($"[PROFESSORES] Professor não encontrado - ID: {id}");
+                    return NotFound();
+                }
+
+                _context.Professores.Remove(professor);
+                await _context.SaveChangesAsync();
+
+                Console.WriteLine($"[PROFESSORES] ✅ Professor deletado - ID: {id}");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[PROFESSORES] ❌ Erro: {ex.Message}");
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+    }
+
+    public class CreateProfessorRequest
+    {
+        public string Nome { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string? Disciplina { get; set; }
+    }
+
+    public class UpdateProfessorRequest
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string? Disciplina { get; set; }
     }
 }

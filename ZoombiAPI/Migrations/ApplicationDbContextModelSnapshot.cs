@@ -106,6 +106,9 @@ namespace ZoombiAPI.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<double>("NotaProva")
+                        .HasColumnType("double");
+
                     b.Property<int>("ProfessorId")
                         .HasColumnType("int");
 

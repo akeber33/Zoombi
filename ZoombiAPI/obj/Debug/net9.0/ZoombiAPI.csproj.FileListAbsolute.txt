@@ -332,6 +332,7 @@ C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.AssemblyInfo.cs
 C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.csproj.CoreCompileInputs.cache
 C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\ZoombiAPI.sourcelink.json
 C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\src\Zoombi (2)\Zoombi\ZoombiAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

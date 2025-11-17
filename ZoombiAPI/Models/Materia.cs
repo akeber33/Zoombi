@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-
 namespace ZoombiAPI.Models
 {
     public class Materia
@@ -9,6 +8,7 @@ namespace ZoombiAPI.Models
         public string Cor { get; set; } = "#3B82F6";
         public int ProfessorId { get; set; }
         public string UsuarioId { get; set; } = string.Empty;
+        public double NotaProva { get; set; } = 0; 
         
         [JsonIgnore]
         public virtual Professor? Professor { get; set; }

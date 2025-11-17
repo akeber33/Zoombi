@@ -53,7 +53,6 @@ async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T> 
         const errorData = await response.json()
         console.error('[API] ❌ Erro completo do servidor:', JSON.stringify(errorData, null, 2))
         
-        // Tratamento específico para erros de validação do .NET
         if (errorData.errors) {
           const validationErrors = Object.entries(errorData.errors)
             .map(([field, errors]) => `${field}: ${Array.isArray(errors) ? errors.join(', ') : errors}`)
@@ -73,7 +72,6 @@ async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T> 
       throw new Error(errorMessage)
     }
 
-    // Para DELETE que retorna NoContent (204), não tente fazer parse do JSON
     if (response.status === 204) {
       return {} as T
     }
@@ -149,10 +147,23 @@ export const dashboardApi = {
 export const teachersApi = {
   getAll: () => fetchApi<Professor[]>('/Professores'),
   
+  getById: (id: number) => fetchApi<Professor>(`/Professores/${id}`),
+  
   create: (professor: CreateProfessorDTO) =>
     fetchApi<Professor>('/Professores', {
       method: 'POST',
       body: JSON.stringify({
+        nome: professor.nome,
+        email: professor.email,
+        disciplina: professor.disciplina || ''
+      }),
+    }),
+  
+  update: (id: number, professor: UpdateProfessorDTO) =>
+    fetchApi<void>(`/Professores/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        id: id,
         nome: professor.nome,
         email: professor.email,
         disciplina: professor.disciplina || ''
@@ -177,7 +188,8 @@ export const subjectsApi = {
       body: JSON.stringify({
         nome: materia.nome,
         cor: materia.cor,
-        professorId: materia.professorId
+        professorId: materia.professorId,
+        notaProva: materia.notaProva || 0
       }),
     }),
   
@@ -188,7 +200,8 @@ export const subjectsApi = {
         id: id,
         nome: materia.nome,
         cor: materia.cor,
-        professorId: materia.professorId
+        professorId: materia.professorId,
+        notaProva: materia.notaProva
       }),
     }),
   
@@ -202,6 +215,24 @@ export const subjectsApi = {
       method: 'POST',
     })
   },
+
+  // Gerenciar trabalhos
+  addTrabalho: (materiaId: number, trabalho: CreateTrabalhoDTO) =>
+    fetchApi<Trabalho>(`/Materias/${materiaId}/trabalhos`, {
+      method: 'POST',
+      body: JSON.stringify(trabalho),
+    }),
+
+  updateTrabalho: (materiaId: number, trabalhoId: number, trabalho: UpdateTrabalhoDTO) =>
+    fetchApi<void>(`/Materias/${materiaId}/trabalhos/${trabalhoId}`, {
+      method: 'PUT',
+      body: JSON.stringify(trabalho),
+    }),
+
+  deleteTrabalho: (materiaId: number, trabalhoId: number) =>
+    fetchApi<void>(`/Materias/${materiaId}/trabalhos/${trabalhoId}`, {
+      method: 'DELETE',
+    }),
 }
 
 // ============= NOTES API =============
@@ -237,78 +268,14 @@ export const notesApi = {
     }),
 }
 
-// ============= ASSIGNMENTS API (Trabalhos) =============
-export const assignmentsApi = {
-  // Obter todos os trabalhos de UMA matéria
-  getAllBySubject: (materiaId: number) =>
-    fetchApi<Trabalho[]>(`/Materias/${materiaId}/Trabalhos`),
-
-  // Obter um trabalho específico pelo ID
-  getById: (trabalhoId: number) =>
-    fetchApi<Trabalho>(`/Trabalhos/${trabalhoId}`),
-
-  // Criar um novo trabalho
-  create: (trabalho: CreateTrabalhoDTO) =>
-    fetchApi<Trabalho>('/Trabalhos', {
-      method: 'POST',
-      body: JSON.stringify(trabalho),
-    }),
-
-  // Atualizar um trabalho
-  update: (trabalhoId: number, trabalho: UpdateTrabalhoDTO) =>
-    fetchApi<void>(`/Trabalhos/${trabalhoId}`, {
+// ============= PROFILE API =============
+export const profileApi = {
+  get: () => fetchApi<Usuario>('/Usuarios/perfil'),
+  
+  update: (data: UpdateProfileDTO) =>
+    fetchApi<void>('/Usuarios/perfil', {
       method: 'PUT',
-      body: JSON.stringify({ ...trabalho, id: trabalhoId }),
-    }),
-
-  // Marcar um trabalho como concluído/não concluído
-  toggleCompleted: (trabalhoId: number, concluido: boolean) =>
-    fetchApi<void>(`/Trabalhos/${trabalhoId}/concluir`, {
-      method: 'PUT',
-      body: JSON.stringify({ concluido }),
-    }),
-
-  // Deletar um trabalho
-  delete: (trabalhoId: number) =>
-    fetchApi<void>(`/Trabalhos/${trabalhoId}`, {
-      method: 'DELETE',
-    }),
-}
-
-// ============= CLASSES API (Aulas/Presença) =============
-export const classesApi = {
-  // Obter todas as aulas de UMA matéria
-  getAllBySubject: (materiaId: number) =>
-    fetchApi<Aula[]>(`/Materias/${materiaId}/Aulas`),
-
-  // Obter uma aula específica
-  getById: (aulaId: number) => fetchApi<Aula>(`/Aulas/${aulaId}`),
-
-  // Criar um novo registro de aula (ex: registrar aula de hoje)
-  create: (aula: CreateAulaDTO) =>
-    fetchApi<Aula>('/Aulas', {
-      method: 'POST',
-      body: JSON.stringify(aula),
-    }),
-
-  // Atualizar uma aula (ex: mudar data, observações)
-  update: (aulaId: number, aula: UpdateAulaDTO) =>
-    fetchApi<void>(`/Aulas/${aulaId}`, {
-      method: 'PUT',
-      body: JSON.stringify({ ...aula, id: aulaId }),
-    }),
-
-  // Marcar presença em uma aula específica
-  updateAttendance: (aulaId: number, presente: boolean) =>
-    fetchApi<void>(`/Aulas/${aulaId}/presenca`, {
-      method: 'PUT',
-      body: JSON.stringify({ presente }),
-    }),
-
-  // Deletar um registro de aula
-  delete: (aulaId: number) =>
-    fetchApi<void>(`/Aulas/${aulaId}`, {
-      method: 'DELETE',
+      body: JSON.stringify(data),
     }),
 }
 
@@ -345,6 +312,12 @@ export const studentApi = {
       assignmentCompletionRate: dashboard.metricasProgresso.percentualTrabalhos,
     }
   },
+
+  // Atualizar perfil (usando profileApi)
+  updateProfile: (data: UpdateProfileDTO) => profileApi.update(data),
+
+  // Buscar perfil completo do servidor
+  getFullProfile: () => profileApi.get(),
 }
 
 // ============= INTERFACES =============
@@ -403,6 +376,7 @@ export interface Materia {
   nome: string
   cor: string
   professorId: number
+  notaProva: number
   usuarioId?: string
   professor?: Professor
   aulas?: Aula[]
@@ -443,16 +417,24 @@ export interface CreateProfessorDTO {
   disciplina?: string
 }
 
+export interface UpdateProfessorDTO {
+  nome: string
+  email: string
+  disciplina?: string
+}
+
 export interface CreateMateriaDTO {
   nome: string
   cor: string
   professorId: number
+  notaProva?: number
 }
 
 export interface UpdateMateriaDTO {
   nome: string
   cor: string
   professorId: number
+  notaProva?: number
 }
 
 export interface CreateNoteDTO {
@@ -465,6 +447,33 @@ export interface UpdateNoteDTO {
   titulo: string
   conteudo: string
   materiaId?: number
+}
+
+export interface CreateTrabalhoDTO {
+  titulo: string
+  descricao?: string
+  dataEntrega: string
+  concluido: boolean
+}
+
+export interface UpdateTrabalhoDTO {
+  titulo: string
+  descricao?: string
+  dataEntrega: string
+  concluido: boolean
+}
+
+export interface Usuario {
+  id: number
+  nome: string
+  email: string
+  telefone?: string
+  avatar?: string
+}
+
+export interface UpdateProfileDTO {
+  nome: string
+  telefone?: string
 }
 
 export interface Teacher {
